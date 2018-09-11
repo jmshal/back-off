@@ -1,0 +1,33 @@
+{
+  "name": "@jmshal/back-off",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc",
+    "clean": "rm -rf ./lib",
+    "dts": "dts-generator --name @jmshal/back-off/lib --project . --out lib/types.d.ts",
+    "version": "npm run clean && npm run build && npm run dts"
+  },
+  "files": [
+    "lib"
+  ],
+  "types": "lib/types.d.ts",
+  "main": "lib/index.js",
+  "author": {
+    "email": "git@jacobmarshall.co",
+    "name": "Jacob Marshall",
+    "url": "https://j.msh.al"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmshal/back-off.git"
+  },
+  "dependencies": {
+    "dts-generator": "^2.1.0",
+    "typescript": "^3.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
