@@ -1,6 +1,6 @@
 {
   "name": "@jmshal/back-off",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
