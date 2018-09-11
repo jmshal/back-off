@@ -5,11 +5,11 @@ export function backOff(...actions: Array<BackOffAction>) {
   const err = actions[actions.length - 1] instanceof Error
     ? actions.pop() as Error
     : new Error('Ran out of retries.');
-  function wait(): Promise<void> {
+  function wait(customErr?: Error): Promise<void> {
     return new Promise((resolve, reject) => {
       const action = actions[index++];
       if (typeof action === 'undefined') {
-        reject(err);
+        reject(customErr || err);
       } else if (action === 0) {
         resolve(); // Prevent using setTimeout when 0 seconds provided
       } else {
