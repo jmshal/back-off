@@ -5,7 +5,7 @@
     "start": "tsc --watch",
     "build": "tsc",
     "clean": "rm -rf ./lib",
-    "dts": "dts-generator --name @jmshal/back-off/lib --project . --out lib/types.d.ts",
+    "dts": "dts-generator --name @jmshal/back-off --project . --out lib/types.d.ts",
     "version": "npm run clean && npm run build && npm run dts"
   },
   "files": [
